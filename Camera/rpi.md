@@ -26,3 +26,4 @@ Utilizing High-Level Visual Feature for Indoor Shopping Mall Localization
 Smartphone based approximate localization using user highlighted texts from images
 OCR + Localization
 ```
+### picamera [Reference](https://projects.raspberrypi.org/en/projects/getting-started-with-picamera)
