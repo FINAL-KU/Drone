@@ -4,7 +4,9 @@
 
 **IMU 센서 조사**
 
-: dji의 flight controller, px4의 flight controller, 갤럭시, 아이폰에서 사용되는 imu 센서
+```
+dji의 flight controller, px4의 flight controller, 갤럭시, 아이폰에서 사용되는 imu 센서
+```
 
 
 
@@ -30,3 +32,28 @@ MPU6050 :   <https://github.com/search?l=Python&q=MPU6050&type=Repositories>
 - github에 python 코드를 포함하고 있는 imu 센서는 **Galaxy S7의 LSM6DS3** 하나 뿐이였고,  나머지는 소스코드가 아에 없거나 c나 c++로 구성되있음.
 - LSM 시리즈와 같이 자주 사용되고있는 MPU6500의 경우에는 github에 python 소스코드가 존재하지 않지만 하위버전인 MPU6050의 코드는 정보량이 LSM6DS3의 배수로 많음.  
 
+
+
+------
+
+(190402)
+
+1. LSM6DS3
+
+   ```
+   SparkFun $10.95 : 
+   https://www.sparkfun.com/products/13339
+   
+   디바이스마트 24000원 : 
+   http://www.devicemart.co.kr/goods/view?no=1273736
+   ```
+
+2.  MPU6500
+
+   ```
+   Banggood 3640원:  https://www.banggood.com/ko/GY-6500-MPU6500-6DOF-6-Axis-Attitude-Acceleration-Gyroscope-Sensor-Module-SPI-Interface-p-1200561.html?cur_warehouse=CN
+   
+   open impulse $3.63 : https://www.openimpulse.com/blog/products-page/product-category/mpu6500-accelerometer-giroscope-module/
+   ```
+
+   
