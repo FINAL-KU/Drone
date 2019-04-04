@@ -1,0 +1,54 @@
+# Author: Inyong
+
+Sensor: IMU(Gyro-3, Acc-3), Camera(x1), Distance Sensor(x3)
+
+Start:
+    Fly(x=0, y=0, z=1)
+    pos[0] = OCR2MAP()
+
+Flying:
+    @ Thread 1
+    while(Flying):
+        IMU2MAP(IMU)
+        if pos[-1] = GOAL:
+            now = OCR2MAP()
+            if pos[-1] is now:
+                print("END")
+                Land() # Fly(x=0, y=0, z=-1)
+            else:
+                pos[-1] = now # keep finding goal point
+
+    @ Thread 2
+    Fly(x=1, y=0, z=0) # Pitch
+    obs = Obstacle(Front), Obstacle(Right), Obstacle(Left)
+    '''
+    Fly to where obs is None
+    1. Front or 2. Right or 3. Left
+    Right: y=0.5 and Check again
+    Left: y=-0.5 and Check again
+    '''
+    Fly(check(obs))
+
+Function OCR2MAP():
+    for(n=1~4):
+        Turn(90)
+        img[n]=Take_Picture()
+        txt[n]=OCR(img[n])
+        pos=MatchDB(txt)
+     return pos
+
+Function Take_Picture():
+    return image
+
+Function OCR(Image):
+    return text
+
+Function IMU2MAP(IMU):
+    pos = mapping() # mapping and find now position
+    return pos
+
+Function Obstacle(Sensor):
+    if distance <= 0.5:
+        return True
+    else:
+        return False
