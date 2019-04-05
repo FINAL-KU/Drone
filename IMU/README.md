@@ -9,9 +9,5 @@
 
 **19/04/05**
 
-![1554453887066](C:\Users\jdspc\AppData\Roaming\Typora\typora-user-images\1554453887066.png)
-
-
-
 - Raspberrypi - MPU6050 6axis raw data 얻기 완료.
 
