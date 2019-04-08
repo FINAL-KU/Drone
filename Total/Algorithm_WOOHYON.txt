@@ -1,0 +1,110 @@
+# WOOHYON
+
+# https://www.youtube.com/watch?v=f6tmQHCHz4E
+
+
+
+# Distance Sensor   (Primary)
+ - Collision Avoidance
+ - 2-front, 1-left, 1-right (total 4)
+
+# IMU Sensor   (Main / Secondary)
+ - Strapdown method (device에 센서를 고정하여 자세를 추정)
+ - 3-Gyro, 3-Accel
+
+# Vision   ()
+ - For Calibration 
+ - feature tracking (??)
+ - time interval (x fps??)
+
+
+Algorithm_Code
+
+dataset = features from the image of the environment
+
+Main():
+
+    takeoff()
+
+    while(position != goal):
+
+        step++
+
+        if distance == true:
+            hover()
+            yaw(90)
+            get_sensor_distance()
+            continue
+        else:
+            move()
+            gyro_X,Y,Z, accel_X,Y,Z = get_IMU()
+            position = get_position(gyro_X,Y,Z, accel_X,Y,Z)
+            print position on the map
+
+            # Calibration을 매 step마다 진행할지 일정 간격마다 한번씩 진행할지 고민중
+            if(step % 10 == 0)
+                vision = get_picture()
+                feature = get_feature(vision)
+
+                if (feature == dataset):
+                    position = calibration()
+                else:
+                    continue
+
+
+    print("Done!")
+    land()
+
+
+
+Function feature_Tracking():
+    vision = get_picture()
+    get_feature(vision)
+
+
+Function get_sensor_distance():
+    distance_sensor = measure distance from sensor
+    for n in # of sensors
+	if distance_sensor <= 1m
+            return true
+        else
+            return false
+
+
+Function get_picture():
+    vision = take picture from camera (10fps)
+    return vision
+
+
+Function get_feature(vision):
+    feature = get features from the picture
+    return feature
+
+Function get_IMU():
+    gyro_X,Y,Z = gyroscope x/y/z-axis
+    accel_X,Y,Z = Acceleration x/y/z-axis
+
+    return Gyro_X,Y,Z Accel_X,Y,Z
+
+
+Function get_position(gyro_X,Y,Z, accel_X,Y,Z)
+    position = calculate position of device based on measured gyro_X,Y,Z and acccel_X,Y,Z
+    return position
+
+
+Function calibration()
+    angle = calculate angle from the difference between feature in vision and dataset
+    calibrate the position using calculated angle
+    return calibrated_position
+
+
+
+
+
+
+
+
+
+
+
+
