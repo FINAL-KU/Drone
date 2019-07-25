@@ -26,3 +26,15 @@ Navigation - 1. IMU로 자신의 위치를 판단하고 2. vision으로 위치 �
 - IMU 센서 가격 비교 및 최종 구매 결정하기.
 - 전체 알고리즘 또는 모델을 플로우차트 또는 수도코드로 만들기.
 ```
+
+
+
+
+# ARdrone - Notebook 통신으로 센서 데이터 받아오기 (Linux(python2.7)환경에서 psdrone.py 테스트시 이상없음)
+```
+- psdrone은 linux 환경에 맞게 설정되어있음.(windows 용으로 변환필요)
+- psdrone은 python2.7로 코드 환경이 구성되어있어서, 나중을 위해서 python3로 변환필요.
+- ardrone - 노트북 통신으로 데이터를 받기 어려운경우 ardrone - raspi(Linux) - Notebook(windows - putty)도 고려.
+
+- pixhawk
+```
